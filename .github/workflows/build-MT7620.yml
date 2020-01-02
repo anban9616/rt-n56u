@@ -72,7 +72,7 @@ jobs:
         #echo "CONFIG_FIRMWARE_INCLUDE_FRPS=n" >> .config #内网穿透FRPS
         #echo "CONFIG_FIRMWARE_INCLUDE_TUNSAFE=n" >> .config #TUNSAFE
         echo "CONFIG_FIRMWARE_INCLUDE_ALIDDNS=y" >> .config #阿里DDNS
-        #echo "CONFIG_FIRMWARE_INCLUDE_SMARTDNS=y" >> .config
+        echo "CONFIG_FIRMWARE_INCLUDE_SMARTDNS=y" >> .config
         ####################################################################################
         if [ "$m"="PSG1218_nano" ]; then
         sed -i '/CONFIG_FIRMWARE_INCLUDE_TTYD/d' .config
