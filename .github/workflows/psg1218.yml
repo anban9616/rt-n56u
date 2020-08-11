@@ -85,11 +85,9 @@ jobs:
         sudo ./build_firmware_bkye $m
         sudo mv -f images/*.trx /opt/images/
         done
-    - name: Upload binaries to release
-      uses: svenstaro/upload-release-action@v1-release
-      with:
-        repo_token: ${{ secrets.repo_token }}
-        file: /opt/images/*.trx
-        tag: AtuoBuild
-        overwrite: true
-        file_glob: true
+        
+    - name: Upload firmware
+        uses: actions/upload-artifact@master
+        with:
+          name: padavan_firmware
+          file: /opt/images/*.trx
