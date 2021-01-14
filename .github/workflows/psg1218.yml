@@ -87,7 +87,7 @@ jobs:
         done
         
     - name: Upload firmware
-        uses: actions/upload-artifact@master
+        uses: anban9616/rt-n56u@psg1218
         with:
           name: padavan_firmware
           file: /opt/images/*.trx
